@@ -5,6 +5,7 @@ from pic.items import PicItem
 
 class XhSpider(scrapy.Spider):
     name = 'xh'
+    # 限制爬虫只在该域名下爬
     allowed_domains = ['xiaohuar.com']
     start_urls = ['http://www.xiaohuar.com/list-1-1.html']
 
