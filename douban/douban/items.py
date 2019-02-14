@@ -11,4 +11,8 @@ import scrapy
 class DoubanItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    douban_score = scrapy.Field()
+    douban_votes = scrapy.Field()
+    authors = scrapy.Field()
+    publisher = scrapy.Field()
