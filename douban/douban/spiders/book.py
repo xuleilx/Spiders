@@ -7,11 +7,11 @@ from douban.items import DoubanItem
 class BookSpider(CrawlSpider):
     name = 'book'
     allowed_domains = ['douban.com']
-    start_urls = ['https://book.douban.com/tag/%E5%B0%8F%E8%AF%B4']
+    start_urls = ['https://book.douban.com/tag/小说']
 
     rules = [
-        Rule(LinkExtractor(allow=("subject/\d+$")), callback='parse_item'),
-        Rule(LinkExtractor(allow=("tag/[^/]+$", )), follow=True),
+        Rule(LinkExtractor(allow=("subject/\d+[/]$")), callback='parse_item'),
+        Rule(LinkExtractor(allow=("tag/小说[^/]+$", )), follow=True),
         #Rule(sle(allow=("/tag/$", )), follow=True),
         # Rule(LinkExtractor(allow=('list-1-(\d)+\.html',)), callback='parse_item', follow=True),
     ]
