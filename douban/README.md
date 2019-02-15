@@ -17,4 +17,15 @@
   1. IP代理
 # 实现
 ## csv保存数据
+### 方法1：修改配置文件settings.py
+```python
+# feed exports
+# encode
+FEED_EXPORT_ENCODING='utf-8'
 
+# format
+FEED_URI = 'file:///tmp/export.csv'
+FEED_FORMAT='csv'
+FEED_EXPORT_FIELDS = ["name", "douban_score", "douban_votes","authors","publisher"]
+FEED_STORE_EMPTY = False
+```
