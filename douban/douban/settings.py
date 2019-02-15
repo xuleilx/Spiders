@@ -90,5 +90,12 @@ DOWNLOAD_DELAY = 3
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-#encode
+# feed exports
+# encode
 FEED_EXPORT_ENCODING='utf-8'
+
+# format
+FEED_URI = 'file:///tmp/export.csv'
+FEED_FORMAT='csv'
+FEED_EXPORT_FIELDS = ["name", "douban_score", "douban_votes","authors","publisher"]
+FEED_STORE_EMPTY = False
